@@ -23,10 +23,13 @@ const handleClick = () => {
 
     if (date)
         filteredData = filteredData.filter(row => row.datetime === date)
+        
+    console.log(date)
+    console.log(filteredData)
     
     tbody.html('')  // Clear existing data
 
-    data.forEach(row => {
+    filteredData.forEach(row => {
         const currentRow = tbody.append('tr')  // append row
         Object.values(row).forEach(value => {
             const cell = currentRow.append('td')
