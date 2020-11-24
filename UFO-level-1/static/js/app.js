@@ -16,6 +16,8 @@ function buildTable(data) {
 const handleClick = () => {
     d3.event.preventDefault()
 
+    //console.log("Button Clicked!")
+
     const date = d3.select('#datetime').property('value')
     let filteredData = tableData;
 
